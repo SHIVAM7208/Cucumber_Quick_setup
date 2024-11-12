@@ -17,7 +17,7 @@ public class WebDriverSingleton_factory {
 	
 	
 		//Combined Singleton and Factory Design Pattern for WebDriver
-		private static WebDriver driver;
+		 private static WebDriver driver;
 		 private static Connection dbConnectionInstance;
 		 private static Workbook excelWorkbookInstance;
 

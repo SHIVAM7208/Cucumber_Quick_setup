@@ -23,7 +23,8 @@ public class LoginPage {
     // Page Factory with @FindBy annotations for lazy loading of elements
     @FindBy(id = "username")
     private WebElement usernameField;
-
+    
+    
     @FindBy(id = "password")
     private WebElement passwordField;
 
@@ -54,5 +55,7 @@ public class LoginPage {
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();
+        
+        
     }
 }
