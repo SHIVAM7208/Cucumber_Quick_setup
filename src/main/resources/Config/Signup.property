@@ -1,0 +1,4 @@
+signup.email_id=pseudonym_session_unique_id
+signup.password_id=pseudonym_session_password
+signup.login_xpath=//*[@value="Log In"]
+signup.URL=https://canvas-test.emeritus.org/login/canvas

@@ -1,16 +1,20 @@
 package page_object_factory;
 
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+
+
 
 
 public class WebDriverSingleton_factory {
@@ -20,6 +24,7 @@ public class WebDriverSingleton_factory {
 		 private static WebDriver driver;
 		 private static Connection dbConnectionInstance;
 		 private static Workbook excelWorkbookInstance;
+
 
 	    // Private constructor to prevent instantiation
 	    private WebDriverSingleton_factory() {}
@@ -114,4 +119,7 @@ public class WebDriverSingleton_factory {
             excelWorkbookInstance = null;
         }
 }
+	    
+	
+	    
 }
