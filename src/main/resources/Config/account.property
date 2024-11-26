@@ -8,3 +8,5 @@ acc.My_Profile_pg_link=My Profile
 acc.Collaborate_(_In_Tab_)_pg_link=Collaborate (In Tab)
 acc.Global_Announcements_pg_link=Global Announcements
 acc.all_page_link_xpath=//ul[@class="css-q5mvdr-view--block-list"]//a
+acc.user_name_css=h2[class="css-cv5a3j-view-heading"]
+acc.user_avater_class=css-11oii8p-view--block-avatar

@@ -2,12 +2,15 @@ package UIcode;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.Scenario;
 import utility.ObjectRepositoryLoader;
@@ -16,16 +19,18 @@ public class Account {
 	
 	 private WebDriver driver;
 	    private ObjectRepositoryLoader objectRepository;
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 	    public Account(WebDriver driver) {
 	        this.driver = driver;
 	        objectRepository = new ObjectRepositoryLoader("C:\\Users\\ShivamDubey\\git\\Selenium_With_Shivam\\src\\main\\resources\\Config\\account.property");
 	    }
 	    
-	    public void Acc_profile_Click() {
-	    	driver.findElement(By.id(objectRepository.getLocator("acc.profile_link"))).click();
+	    public WebElement Acc_profile_Click() {
+	    		driver.findElement(By.id(objectRepository.getLocator("acc.profile_link"))).click();
 	    	
-	    }
+	    	  return wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.className(objectRepository.getLocator("acc.user_avater_class")))));
+			    }
 	    
 	    public void VerfiyAllURLs(Scenario scenario) {
 	    

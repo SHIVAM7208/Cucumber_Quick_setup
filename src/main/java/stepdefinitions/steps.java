@@ -1,6 +1,10 @@
 package stepdefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import UIcode.Account;
@@ -17,7 +21,7 @@ public class steps {
 	private static WebDriver driver;
 	SignUp up;
 	Account acc;
-	
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	
 	@Given("Website URL Open")
 	public void website_url_open() {
@@ -50,8 +54,7 @@ public class steps {
 		  acc = new Account(driver);
 		  
 		  acc.Acc_profile_Click();
-		  
-		  
+	
 	     
 	  }
 	  @Then("verify all links of Account are clickable")

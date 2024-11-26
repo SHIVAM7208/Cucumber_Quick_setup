@@ -9,6 +9,7 @@ import utility.WebDriverSingleton_factory;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
@@ -26,7 +27,10 @@ public class Hooks {
     	 driver = WebDriverSingleton_factory.getDriver("chrome");
     	 System.out.println("Starting........");
     	 Hooks.scenario = scenario;
-    	
+    	 // Set the implicit wait (e.g., 10 seconds)
+    	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+    	    
     }
     public static Scenario getScenario() {
         return scenario;
@@ -39,11 +43,11 @@ public class Hooks {
 
         if (scenario.isFailed()) {
             // If the test failed, attach the screenshot with "Screenshot on Failure"
-            System.out.println("Test failed: Attaching screenshot.");
+            //System.out.println("Test failed: Attaching screenshot.");
             scenario.attach(screenshot, "image/png", "Screenshot on Failure");
         } else {
             // If the test passed, attach the screenshot with "Screenshot on Success"
-            System.out.println("Test passed: Attaching screenshot.");
+          //  System.out.println("Test passed: Attaching screenshot.");
             scenario.attach(screenshot, "image/png", "Screenshot on Success");
         }
 
