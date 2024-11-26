@@ -17,19 +17,26 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Let login to web
-  I want to use this template for my feature file
+Feature: Emeritus FE TestCases
+  verifying all FE testcases for Emeritus
+  
+  Background: for login
+  	Given Website URL Open
+		When Userer input email and password
+  
 
   @tag1
   Scenario: Valid User Login
-    Given Website URL Open
-		When Userer input email and password
+   	Given after sucessfully login
 		Then verify the title of page. 
 		
-	@tag2
-	  Scenario: Valid User Login
-    Given Website URL Open
+	@tag2 @FE_48
+	  Scenario: All Links of Account are clickable.
+    Given after sucessfully login
+    And Click on the Account button
+    Then verify all links of Account are clickable
   
+
 
  # @tag2
   #	Scenario Outline: Title of your scenario outline

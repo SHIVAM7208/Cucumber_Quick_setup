@@ -1,4 +1,4 @@
-package page_object_factory;
+package utility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

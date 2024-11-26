@@ -3,7 +3,7 @@ package UIcode;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import page_object_factory.ObjectRepositoryLoader;
+import utility.ObjectRepositoryLoader;
 
 public class SignUp {
 	private WebDriver driver;
@@ -20,6 +20,8 @@ public class SignUp {
     public void password_input() { driver.findElement(By.id(objectRepository.getLocator("signup.password_id"))).sendKeys("sanket@123");  						}
  
     public void Login_B()        { driver.findElement(By.xpath(objectRepository.getLocator("signup.login_xpath"))).click(); 			   					}
+    
+    public void verify_login_pg() {  driver.findElement(By.className(objectRepository.getLocator("signup.verify"))).isDisplayed(); }
  
 
 }

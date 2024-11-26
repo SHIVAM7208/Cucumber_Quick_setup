@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 		,monochrome = true	  
 		//,dryRun = true
 		,plugin = {"pretty","html:target/cucumber.html"}
-		//,tags = 
+		,tags = "@FE_48"
 		
 		)
 

@@ -1,1 +1,10 @@
 acc.profile_link=global_nav_profile_link
+acc.Notifications_pg_link=Notifications
+acc.Files_pg_link=Files
+acc.Settings_pg_link=Setting
+acc.ePortfolios_pg_link=ePortfolios
+acc.Shared_Content_pg_link=Shared Content
+acc.My_Profile_pg_link=My Profile
+acc.Collaborate_(_In_Tab_)_pg_link=Collaborate (In Tab)
+acc.Global_Announcements_pg_link=Global Announcements
+acc.all_page_link_xpath=//ul[@class="css-q5mvdr-view--block-list"]//a

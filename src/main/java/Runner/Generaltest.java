@@ -3,7 +3,7 @@ package Runner;
 import org.openqa.selenium.WebDriver;
 
 import UIcode.SignUp;
-import page_object_factory.WebDriverSingleton_factory;
+import utility.WebDriverSingleton_factory;
 
 public class Generaltest {
 	private static WebDriver driver;

@@ -1,4 +1,4 @@
-package page_object_factory;
+package utility;
 
 
 import java.io.FileInputStream;
