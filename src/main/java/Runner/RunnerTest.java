@@ -12,10 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 		//,plugin = {"pretty","html:target/cucumber.html"}
 		,plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		,tags = "@FE_48"//"@tag1"//
-				
-		
-			   ) 
-
+				)
 public class RunnerTest extends AbstractTestNGCucumberTests {
 	
 	
